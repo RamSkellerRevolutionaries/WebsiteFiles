@@ -7,6 +7,54 @@
 				background-color: aliceblue;
 				text-align: center;
 			}
+			.proffesor {
+				border: 5px outset darkgreen;
+				background-color: lightgreen;
+				text-align: center;
+			}
+			#menu ul {
+				list-style: inside;
+				border: 5px outset lightgreen
+				
+			}
+			#menu li{
+				display: inline;
+				text-align: center;
+			}
+			.dropbtn{
+				background-color: green;
+				color: white;
+				padding: 8px;
+				font-size: 8px;
+				border: none
+			}
+			.dropdown{
+				position: relative;
+				display: inline-block;
+			}
+			.dropdown-content{
+				display: none;
+				position: absolute;
+				background-color: rgb(13, 136, 32);
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px
+				rgba(69, 248, 4, 0.797);
+				z-index: 1;
+			}
+			.dropdown-content a{
+				color: white;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+			.dropdown-content
+			a:hover {background-color:#ddd;}
+			.dropdown:hover
+			.dropdown-content
+			{display: block;}
+
+			.dropdown:hover .dropbtn
+			{background-color:#3e8e41;}
 		</style>
 		<meta charset="utf-8">
 		<title>CIS 360: Home</title>
@@ -16,6 +64,7 @@
 	</head>
 	<body>
 		<h1>CIS 360: Home Page</h1>
+		<div id="menu">
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="syllabus.html">Syllabus</a></li>
@@ -23,7 +72,27 @@
 			<li><a href="grading.html">Grading</a></li>
 			<li><a href="teacher.html">Teacher</a></li>
 			<li><a href="credits.html">Credits</a></li>
+			<div class="dropdown">
+				<button class="dropbtn">
+					=
+				</button>
+				<div class="dropdown-content">
+					<a href="index.html">Home</a>
+					<a href="syllabus.html">Syllabus</a>
+					<a href="schedule.html">Schedule</a>
+					<a href="grading.html">Grading</a>
+					<a href="teacher.html">Teacher</a>
+					<a href="credits.html">Credits</a>
+				</div>
+			</div>
 		</ul>
+		
+	</div>
+		<div class="proffesor">
+			<img src="https://images.unsplash.com/photo-1524024973431-2ad916746881?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z29hdHxlbnwwfHwwfHw%3D&w=1000&q=80"
+			alt="goat"
+			width = "500" height = "325">
+		</div>
 		<div class="description">
 			<h2>Course Description & Objectives</h2>
 			<p>There is considerable overlap between the Information Systems (IS), Computer Science, and Software
