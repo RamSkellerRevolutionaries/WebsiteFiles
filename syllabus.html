@@ -1,6 +1,88 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<style>
+			.grades{
+				border: 5px outset green;
+				background-color:lightgreen;
+				text-align: center;
+			}
+			#menu ul {
+				list-style: inside;
+				border: 5px outset lightgreen
+				
+			}
+			#menu li{
+				display: inline;
+				text-align: center;
+			}
+			.dropbtn{
+				background-color: green;
+				color: white;
+				padding: 8px;
+				font-size: 8px;
+				border: none
+			}
+			.dropdown{
+				position: relative;
+				display: inline-block;
+			}
+			.dropdown-content{
+				display: none;
+				position: absolute;
+				background-color: rgb(13, 136, 32);
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px
+				rgba(69, 248, 4, 0.797);
+				z-index: 1;
+			}
+			.dropdown-content a{
+				color: white;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+			.dropdown-content
+			a:hover {background-color:#ddd;}
+			.dropdown:hover
+			.dropdown-content
+			{display: block;}
+
+			.dropdown:hover .dropbtn
+			{background-color:#3e8e41;}
+			
+		.information-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+		justify-content: center;
+		align-items: center;
+		margin-top: 50px;
+      }
+
+      .information-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #0ff549;
+        padding: 10px;
+      }
+
+      .information-item h2 {
+        font-size: 16px;
+        margin: 0;
+      }
+	  .information-item p {
+        font-size: 14px;
+        line-height: 1;
+        margin: 0;
+      }
+
+      .information-item:not(:last-child) {
+        border-right: none;
+      }
+		</style>
 		<meta charset="utf-8">
 		<title>CIS 360: Syllabus</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +91,32 @@
 	</head>
 	<body>
 		<h1>Syllabus Page</h1>
-		<h2>Grading Scale</h2>
+		<div id="menu">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="syllabus.html">Syllabus</a></li>
+				<li><a href="schedule.html">Schedule</a></li>
+				<li><a href="grading.html">Grading</a></li>
+				<li><a href="teacher.html">Teacher</a></li>
+				<li><a href="credits.html">Credits</a></li>
+				<div class="dropdown">
+					<button class="dropbtn">
+						=
+					</button>
+					<div class="dropdown-content">
+						<a href="index.html">Home</a>
+						<a href="syllabus.html">Syllabus</a>
+						<a href="schedule.html">Schedule</a>
+						<a href="grading.html">Grading</a>
+						<a href="teacher.html">Teacher</a>
+						<a href="credits.html">Credits</a>
+					</div>
+				</div>
+			</ul>
+			
+		</div>
+		<div class = "grades">
+			<h2>Grading Scale</h2>
 		<ul>
 			<li>93% <= A < 100%</li>
 			<li>90% <= A- < 93%</li>
@@ -20,9 +127,9 @@
 			<li>73% <= C < 77%</li>
 			<li>70% <= C- < 73%</li>
 			<li>60% <= D < 70%</li>
-			<li>0% <= F < 60%<li></li>
+			<li>0% <= F < 60%<li>
 		</ul>
-		
+		</div>
 		<h2>disciplinary actions</h2>
 		<ul>
 			Academic Integrity & CSU Honor Pledge: This course will adhere to the CSU Academic
@@ -48,9 +155,48 @@
 		</ul>
 		
 		<h2>Tentative Class Schedule</h2>
-		<ul>
-			<li></li>
-		</ul>
+		<div class="information-container"></div>
+		  <script>
+			function addInformation(date, topic, task) {
+        var item = $('<div class="information-item">' +
+                        '<h2>Date</h2>' +
+                        '<p class="date"></p>' +
+                        '<h2>Topic</h2>' +
+                        '<p class="topic"></p>' +
+                        '<h2>What\'s Due</h2>' +
+                        '<p class="task"></p>' +
+                      '</div>');
+
+        item.find('.date').text(date);
+        item.find('.topic').text(topic);
+        item.find('.task').text(task);
+
+        $('.information-container').append(item);
+
+        // Add a separator between each item
+        if ($('.information-container').children().length > 1) {
+          $('.information-container').children().not(':last-child').after('<div class="separator"></div>');
+        }
+      }
+	   $(document).ready(function() {
+        addInformation('Week 1 1/16/18', 'course Overview, System Analyst',);
+		addInformation('Week 2 1/23-25', 'Systems Development Life Cycle, Systems Development Approaches', 'Reflection Paper 1, Team Membership Request (optional) ')
+		addInformation('Week 3 1/23-25', 'Systems Development Life Cycle, Systems Developmetn Approches', 'Reflection Paper 2, Team Project D1');
+		addInformation('Week 4 2/6-8', 'Process Modeling: Activity Diagram', '');
+		addInformation('Week 5 2/13-15', 'Use Case Modeling: Use Case Diagram, Review for Exam 1');
+		addInformation('week 6 2/20-22', 'No class: Team Meetings with proffessor', 'Team Project D2 and Meetings');
+		addInformation('Week 7 2/27-3/1', 'Exam 1, Use Case Modeling: Use Case Description');
+		addInformation('Week 8 3/6-8', 'Use case Modeling: Use Case Description, Domain Modeling:Class Diagrams');
+		addInformation('Week 9 3/13-15', 'SPRING BREAK');
+		addInformation('Week 10 3/20-22', 'Domain Modeling: Class Diagrams, Review for Exam 2');
+		addInoformation('Week 11 3/27-29', 'Transition to Design Models, Exam 2');
+		addInformation('week 12 4/3-5', 'User Interface Design');
+		addInformation('Week 13 4/10-12', 'User Interface Design, Sourcing and Testing', 'Team Project D3');
+		addInformation('Week 14 4/17-19', 'Test case Design, Review for Exam 3');
+		addInformation('Week 15 4/24-26', 'Exam 3');
+		addInformation('Week 16 5/1-3', 'User Interface Demonstrations', 'Team Project D4 and Demo, Peer Evaluation');
+      });
+		  </script>
 		
 	</body>
 </html>
