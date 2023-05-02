@@ -1,202 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<style>
-			.grades{
-				border: 5px outset green;
-				background-color:lightgreen;
-				text-align: center;
-			}
-			#menu ul {
-				list-style: inside;
-				border: 5px outset lightgreen
-				
-			}
-			#menu li{
-				display: inline;
-				text-align: center;
-			}
-			.dropbtn{
-				background-color: green;
-				color: white;
-				padding: 8px;
-				font-size: 8px;
-				border: none
-			}
-			.dropdown{
-				position: relative;
-				display: inline-block;
-			}
-			.dropdown-content{
-				display: none;
-				position: absolute;
-				background-color: rgb(13, 136, 32);
-				min-width: 160px;
-				box-shadow: 0px 8px 16px 0px
-				rgba(69, 248, 4, 0.797);
-				z-index: 1;
-			}
-			.dropdown-content a{
-				color: white;
-				padding: 12px 16px;
-				text-decoration: none;
-				display: block;
-			}
-			.dropdown-content
-			a:hover {background-color:#ddd;}
-			.dropdown:hover
-			.dropdown-content
-			{display: block;}
+<head>
 
-			.dropdown:hover .dropbtn
-			{background-color:#3e8e41;}
-			
-		.information-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-		justify-content: center;
-		align-items: center;
-		margin-top: 50px;
-      }
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CIS 360">
 
-      .information-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: 1px solid #0ff549;
-        padding: 10px;
-      }
+    <!-- Title -->
+    <title>CIS 360 | Syllabus</title>
 
-      .information-item h2 {
-        font-size: 16px;
-        margin: 0;
-      }
-	  .information-item p {
-        font-size: 14px;
-        line-height: 1;
-        margin: 0;
-      }
+    <!-- Style Sheets -->
+    <link href="./CSS/Style.css" rel="stylesheet" type="text/css">
 
-      .information-item:not(:last-child) {
-        border-right: none;
-      }
-		</style>
-		<meta charset="utf-8">
-		<title>CIS 360: Syllabus</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="Style.css">
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	</head>
-	<body>
-		<h1>Syllabus Page</h1>
-		<div id="menu">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="syllabus.html">Syllabus</a></li>
-				<li><a href="schedule.html">Schedule</a></li>
-				<li><a href="grading.html">Grading</a></li>
-				<li><a href="teacher.html">Teacher</a></li>
-				<li><a href="credits.html">Credits</a></li>
-				<div class="dropdown">
-					<button class="dropbtn">
-						=
-					</button>
-					<div class="dropdown-content">
-						<a href="index.html">Home</a>
-						<a href="syllabus.html">Syllabus</a>
-						<a href="schedule.html">Schedule</a>
-						<a href="grading.html">Grading</a>
-						<a href="teacher.html">Teacher</a>
-						<a href="credits.html">Credits</a>
-					</div>
-				</div>
-			</ul>
-			
-		</div>
-		<div class = "grades">
-			<h2>Grading Scale</h2>
-		<ul>
-			<li>93% <= A < 100%</li>
-			<li>90% <= A- < 93%</li>
-			<li>87% <= B+ < 90%</li>
-			<li>83% <= B < 87%</li>
-			<li>80% <= B- < 83%</li>
-			<li>77% <= C+ < 80%</li>
-			<li>73% <= C < 77%</li>
-			<li>70% <= C- < 73%</li>
-			<li>60% <= D < 70%</li>
-			<li>0% <= F < 60%<li>
-		</ul>
-		</div>
-		<h2>disciplinary actions</h2>
-		<ul>
-			Academic Integrity & CSU Honor Pledge: This course will adhere to the CSU Academic
-	Integrity/Misconduct policy as found in the General Catalog and the Student Conduct Code. All the work
-	that you do in this class should be your own work with originality and without sharing academic work
-	unless a group assignment has been given. Examples of academic dishonesty include (but are not limited
-	to) paraphrasing/quoting content without referencing the source, unauthorized sharing of exams,
-	receiving unauthorized assistance or working as a group on a take-home exam, or lying to extend the due
-	date. For more information on academic integrity, check out CSU’s Academic Honesty and Integrity.
-	Academic integrity lies at the core of our common goal: to create an intellectually honest and rigorous
-	community. Because academic integrity, and the personal and social integrity of which academic integrity
-	is an integral part, it is so central to our mission as students, teachers, scholars, and citizens, I will ask that
-	you affirm the CSU Honor Pledge as part of completing your work in this course.
-	The use of online “homework helper” sites including, but not limited to,
-	Chegg, NoteHall, Quizlet, and Koofers is not permitted in this course. Use of
-	these types of resources will be considered receiving unauthorized assistance
-	and, therefore, a violation of the student conduct code.
-	Although I do not expect it to happen in this class, students engaged in academic misconduct will be
-	penalized. Depending on the degree of misconduct, penalties range from failure on an individual
-	assignment to failure of the course to expulsion from the University. Refer to the CIS Department’s
-	Academic Integrity Policy (posted on Canvas under the “Syllabus” section) for more details. Questions
-	related to course assignments and the academic integrity policy should be directed to the professor.
-		</ul>
-		
-		<h2>Tentative Class Schedule</h2>
-		<div class="information-container"></div>
-		  <script>
-			function addInformation(date, topic, task) {
-        var item = $('<div class="information-item">' +
-                        '<h2>Date</h2>' +
-                        '<p class="date"></p>' +
-                        '<h2>Topic</h2>' +
-                        '<p class="topic"></p>' +
-                        '<h2>What\'s Due</h2>' +
-                        '<p class="task"></p>' +
-                      '</div>');
-
-        item.find('.date').text(date);
-        item.find('.topic').text(topic);
-        item.find('.task').text(task);
-
-        $('.information-container').append(item);
-
-        // Add a separator between each item
-        if ($('.information-container').children().length > 1) {
-          $('.information-container').children().not(':last-child').after('<div class="separator"></div>');
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mobile_nav");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
         }
-      }
-	   $(document).ready(function() {
-        addInformation('Week 1 1/16/18', 'course Overview, System Analyst',);
-		addInformation('Week 2 1/23-25', 'Systems Development Life Cycle, Systems Development Approaches', 'Reflection Paper 1, Team Membership Request (optional) ')
-		addInformation('Week 3 1/23-25', 'Systems Development Life Cycle, Systems Developmetn Approches', 'Reflection Paper 2, Team Project D1');
-		addInformation('Week 4 2/6-8', 'Process Modeling: Activity Diagram', '');
-		addInformation('Week 5 2/13-15', 'Use Case Modeling: Use Case Diagram, Review for Exam 1');
-		addInformation('week 6 2/20-22', 'No class: Team Meetings with proffessor', 'Team Project D2 and Meetings');
-		addInformation('Week 7 2/27-3/1', 'Exam 1, Use Case Modeling: Use Case Description');
-		addInformation('Week 8 3/6-8', 'Use case Modeling: Use Case Description, Domain Modeling:Class Diagrams');
-		addInformation('Week 9 3/13-15', 'SPRING BREAK');
-		addInformation('Week 10 3/20-22', 'Domain Modeling: Class Diagrams, Review for Exam 2');
-		addInoformation('Week 11 3/27-29', 'Transition to Design Models, Exam 2');
-		addInformation('week 12 4/3-5', 'User Interface Design');
-		addInformation('Week 13 4/10-12', 'User Interface Design, Sourcing and Testing', 'Team Project D3');
-		addInformation('Week 14 4/17-19', 'Test case Design, Review for Exam 3');
-		addInformation('Week 15 4/24-26', 'Exam 3');
-		addInformation('Week 16 5/1-3', 'User Interface Demonstrations', 'Team Project D4 and Demo, Peer Evaluation');
-      });
-		  </script>
-		
-	</body>
-</html>
+    </script>
+
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="topstripe">
+                <div id="tbb_title">
+                    <a href="index.html">
+                        <h1 id="main_title">CIS 360: Syllabus</h1>
+                    </a>
+                </div>
+                <div class="csu_icons">
+                    <a href="https://www.colostate.edu/">
+                        <picture>
+                            <img src="./images/csu-logo.png" alt="Colorado State Logo" width="80" height="80">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <div class="bottomstripe">
+                <nav id="main_nav">
+                    <ul>
+                        <li class="btn"><a href="index.html">Home</a></li>
+                        <li class="active"><a href="syllabus.html">Syllabus</a></li>
+                        <li class="btn"><a href="schedule.html">Schedule</a></li></li>
+                        <li class="btn"><a href="grading.html">Grading</a></li></li>
+                        <li class="btn"><a href="teacher.html">Teacher</a></li>
+                        <li class="btn"><a href="credits.html">Credits</a></li>
+                    </ul>
+                </nav>
+                <a href="javascript:void(0);" class="hamburger icon" onclick="myFunction()">&#x2261;</a>
+                <nav id="mobile_nav">
+                    <ul>
+                        <li class="btn"><a href="index.html">Home</a></li>
+                        <li class="active"><a href="syllabus.html">Syllabus</a></li>
+                        <li class="btn"><a href="schedule.html">Schedule</a></li></li>
+                        <li class="btn"><a href="grading.html">Grading</a></li></li>
+                        <li class="btn"><a href="teacher.html">Teacher</a></li>
+                        <li class="btn"><a href="credits.html">Credits</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="material">
+            <h2>Disciplinary Actions</h2>
+			<p>Academic Integrity & CSU Honor Pledge: This course will adhere to the CSU Academic
+				Integrity/Misconduct policy as found in the General Catalog and the Student Conduct Code. All the work
+				that you do in this class should be your own work with originality and without sharing academic work
+				unless a group assignment has been given. Examples of academic dishonesty include (but are not limited
+				to) paraphrasing/quoting content without referencing the source, unauthorized sharing of exams,
+				receiving unauthorized assistance or working as a group on a take-home exam, or lying to extend the due
+				date. For more information on academic integrity, check out CSU’s Academic Honesty and Integrity.
+				Academic integrity lies at the core of our common goal: to create an intellectually honest and rigorous
+				community. Because academic integrity, and the personal and social integrity of which academic integrity
+				is an integral part, it is so central to our mission as students, teachers, scholars, and citizens, I will ask that
+				you affirm the CSU Honor Pledge as part of completing your work in this course.
+				The use of online “homework helper” sites including, but not limited to,
+				Chegg, NoteHall, Quizlet, and Koofers is not permitted in this course. Use of
+				these types of resources will be considered receiving unauthorized assistance
+				and, therefore, a violation of the student conduct code.
+				Although I do not expect it to happen in this class, students engaged in academic misconduct will be
+				penalized. Depending on the degree of misconduct, penalties range from failure on an individual
+				assignment to failure of the course to expulsion from the University. Refer to the CIS Department’s
+				Academic Integrity Policy (posted on Canvas under the “Syllabus” section) for more details. Questions
+				related to course assignments and the academic integrity policy should be directed to the professor.
+			</p>
+			<div class="striped-border"></div>
+			<div class="centered">
+				<h2>Grading Scale</h2>
+				<p class="centered">93% <= A < 100%</p>
+				<p class="centered">90% <= A- < 93%</p>
+				<p class="centered">87% <= B+ < 90%</p>
+				<p class="centered">83% <= B < 87%</p>
+				<p class="centered">80% <= B- < 83%</p>
+				<p class="centered">77% <= C+ < 80%</p>
+				<p class="centered">73% <= C < 77%</p>
+				<p class="centered">70% <= C- < 73%</p>
+				<p class="centered">60% <= D < 70%</p>
+				<p class="centered">0% <= F < 60%</p>
+			</div>
+        </div>
+    </div>
+</body>
