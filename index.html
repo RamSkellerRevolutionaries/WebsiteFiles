@@ -1,128 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<style>
-			.description {
-				border: 5px outset green;
-				background-color: aliceblue;
-				text-align: center;
-			}
-			.proffesor {
-				border: 5px outset darkgreen;
-				background-color: lightgreen;
-				text-align: center;
-			}
-			.footer{
-				border: 5px outset green;
-				background-color:lightgreen;
-				text-align: center;
-			}
-			#menu ul {
-				list-style: inside;
-				border: 5px outset lightgreen
-				
-			}
-			#menu li{
-				display: inline;
-				text-align: center;
-			}
-			.dropbtn{
-				background-color: green;
-				color: white;
-				padding: 8px;
-				font-size: 8px;
-				border: none
-			}
-			.dropdown{
-				position: relative;
-				display: inline-block;
-			}
-			.dropdown-content{
-				display: none;
-				position: absolute;
-				background-color: rgb(13, 136, 32);
-				min-width: 160px;
-				box-shadow: 0px 8px 16px 0px
-				rgba(69, 248, 4, 0.797);
-				z-index: 1;
-			}
-			.dropdown-content a{
-				color: white;
-				padding: 12px 16px;
-				text-decoration: none;
-				display: block;
-			}
-			.dropdown-content
-			a:hover {background-color:#ddd;}
-			.dropdown:hover
-			.dropdown-content
-			{display: block;}
+<head>
 
-			.dropdown:hover .dropbtn
-			{background-color:#3e8e41;}
-		</style>
-		<meta charset="utf-8">
-		<title>CIS 360: Home</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="Style.css">
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	</head>
-	<body>
-		<h1>CIS 360: Home Page</h1>
-		<div id="menu">
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="syllabus.html">Syllabus</a></li>
-			<li><a href="schedule.html">Schedule</a></li>
-			<li><a href="grading.html">Grading</a></li>
-			<li><a href="teacher.html">Teacher</a></li>
-			<li><a href="credits.html">Credits</a></li>
-			<div class="dropdown">
-				<button class="dropbtn">
-					=
-				</button>
-				<div class="dropdown-content">
-					<a href="index.html">Home</a>
-					<a href="syllabus.html">Syllabus</a>
-					<a href="schedule.html">Schedule</a>
-					<a href="grading.html">Grading</a>
-					<a href="teacher.html">Teacher</a>
-					<a href="credits.html">Credits</a>
-				</div>
-			</div>
-		</ul>
-		
-	</div>
-		<div class="proffesor">
-			<img src="https://images.unsplash.com/photo-1524024973431-2ad916746881?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z29hdHxlbnwwfHwwfHw%3D&w=1000&q=80"
-			alt="goat"
-			width = "500" height = "325">
-		</div>
-		<div class="description">
-			<h2>Course Description & Objectives</h2>
-			<p>There is considerable overlap between the Information Systems (IS), Computer Science, and Software
-				Engineering disciplines. What makes IS unique is the emphasis on the development, implementation, and
-				evolution of information technology (IT) systems and infrastructures to support organizational goals, such
-				as reduced operating costs, improved productivity, innovation, and speed to market. The successful
-				development and implementation of these systems and infrastructures depends, in large part, on the
-				quality of analysis and design activities. CIS360 introduces the systems development life cycle and
-				methodologies, with an emphasis on analysis and design activities, such as business process analysis,
-				system requirements determination and specification, user interface design, and implementation
-				alternative evaluation (e.g., custom in-house development, outsourcing, and cloud-based solutions). The
-				overall goal of the course is for you to develop the knowledge and skills expected of an IT consultant,
-				systems analyst, or business analyst. Systems analysis and design skills are also important for many
-				other IT careers, such as information security analyst, project manager, software developer, user
-				experience designer, web content manager, and data scientist</p>
-		</div>
-		<div class="footer">
-			<p>CIS360.001 Systems Analysis & Design Spring 2023</p>
-			<p>Professor: Dr. Jon D. Clark</p>
-			<p>Email: jon.clark@colostate.edu</p>
-			<p>Office: Rockwell 151</p>
-			<p>Class Meeting Time & Location: Tues/Thurs 3:30-4:45 p.m., Rockwell 167</p>
-			<p>Office Hours: by appointment</p>
-			<p>Course Teaching Assistant email: TBA</p>
-			<p>Prerequisites: CIS240 or equivalent</p>
-		</div>
-	</body>
-</html>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CIS 360">
+
+    <!-- Title -->
+    <title>CIS 360 | Home</title>
+
+    <!-- Style Sheets -->
+    <link href="./CSS/Style.css" rel="stylesheet" type="text/css">
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mobile_nav");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="topstripe">
+                <div id="tbb_title">
+                    <a href="index.html">
+                        <h1 id="main_title">CIS 360: Home Page</h1>
+                    </a>
+                </div>
+                <div class="csu_icons">
+                    <a href="https://www.colostate.edu/">
+                        <picture>
+                            <img src="./images/csu-logo.png" alt="Colorado State Logo" width="80" height="80">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <div class="bottomstripe">
+                <nav id="main_nav">
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="btn"><a href="syllabus.html">Syllabus</a></li>
+                        <li class="btn"><a href="schedule.html">Schedule</a></li></li>
+                        <li class="btn"><a href="grading.html">Grading</a></li></li>
+                        <li class="btn"><a href="teacher.html">Teacher</a></li>
+                        <li class="btn"><a href="credits.html">Credits</a></li>
+                    </ul>
+                </nav>
+                <a href="javascript:void(0);" class="hamburger icon" onclick="myFunction()">&#x2261;</a>
+                <nav id="mobile_nav">
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="btn"><a href="syllabus.html">Syllabus</a></li>
+                        <li class="btn"><a href="schedule.html">Schedule</a></li></li>
+                        <li class="btn"><a href="grading.html">Grading</a></li></li>
+                        <li class="btn"><a href="teacher.html">Teacher</a></li>
+                        <li class="btn"><a href="credits.html">Credits</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="material">
+            <div class="description">
+                <h2>Course Description & Objectives</h2>
+                <p>There is considerable overlap between the Information Systems (IS), Computer Science, and Software
+                    Engineering disciplines. What makes IS unique is the emphasis on the development, implementation, and
+                    evolution of information technology (IT) systems and infrastructures to support organizational goals, such
+                    as reduced operating costs, improved productivity, innovation, and speed to market. The successful
+                    development and implementation of these systems and infrastructures depends, in large part, on the
+                    quality of analysis and design activities. CIS360 introduces the systems development life cycle and
+                    methodologies, with an emphasis on analysis and design activities, such as business process analysis,
+                    system requirements determination and specification, user interface design, and implementation
+                    alternative evaluation (e.g., custom in-house development, outsourcing, and cloud-based solutions). The
+                    overall goal of the course is for you to develop the knowledge and skills expected of an IT consultant,
+                    systems analyst, or business analyst. Systems analysis and design skills are also important for many
+                    other IT careers, such as information security analyst, project manager, software developer, user
+                    experience designer, web content manager, and data scientist</p>
+            </div>
+            <div class="striped-border"></div>
+            <h2>General Class Information</h2>
+            <div class="footer">
+                <p><strong>Class: </strong>CIS360.001 Systems Analysis & Design Spring 2023</p>
+                <p><strong>Professor: </strong>Dr. Jon D. Clark</p>
+                <p><strong>Email: </strong>jon.clark@colostate.edu</p>
+                <p><strong>Office: </strong>Rockwell 151</p>
+                <p><strong>Time & Location: </strong>Tues/Thurs 3:30-4:45 p.m., Rockwell 167</p>
+                <p><strong>Office Hours: </strong>By appointment</p>
+                <p><strong>TA Email: </strong>TBA</p>
+                <p><strong>Prerequisites: </strong>CIS240 or equivalent</p>
+            </div>
+        </div>
+    </div>
+</body>
