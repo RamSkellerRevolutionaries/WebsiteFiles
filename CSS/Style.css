@@ -62,7 +62,6 @@ h1 {
 #tbb_title {
     display: block;
     align-items: center;
-    padding-left: 15px;
 }
 .csu_icons {
     padding: 10px 5px;
@@ -342,3 +341,13 @@ button a {
     margin-bottom: 0;
   }
   
+td{
+  padding: 10px;
+  margin: 5px;
+}
+table{
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 5px;
+}
