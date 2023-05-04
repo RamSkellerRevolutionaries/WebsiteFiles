@@ -62,6 +62,7 @@ h1 {
 #tbb_title {
     display: block;
     align-items: center;
+    padding-left: 15px;
 }
 .csu_icons {
     padding: 10px 5px;
