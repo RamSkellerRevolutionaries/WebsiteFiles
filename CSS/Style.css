@@ -32,10 +32,7 @@ header {
 .bottomstripe {
     width: 100%;
 }
-table {
-    border-collapse: collapse;
-    width: 100%;
-  }
+
 a {
     border-radius: 5px;
 }
@@ -321,33 +318,32 @@ button a {
     padding: 30px;
     border-radius: 5px;
     text-align: center;
-  }
+}
   
-  .material h1 {
+.material h1 {
     font-size: 36px;
     font-weight: 600;
     color: #333333;
     margin-bottom: 20px;
-  }
+}
   
-  .material p {
+.material p {
     font-size: 18px;
     line-height: 1.6;
     color: #666666;
     margin-bottom: 10px;
-  }
+}
   
-  .material p:last-child {
+.material p:last-child {
     margin-bottom: 0;
-  }
+}
   
 td{
   padding: 10px;
   margin: 5px;
 }
-table{
+table {
   max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
